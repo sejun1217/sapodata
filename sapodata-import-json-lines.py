@@ -19,7 +19,6 @@ sapPassword = '<SAP User Password>'
 dataS3Bucket = "<Amazon S3 bucket name>"
 dataS3Folder = "<Amazon S3 folder name>"
 dataS3name = "<Amazon S3 object name>"
-totalEntities = 100 #totalEntities = <Number of Entries>
 verify = False # verify HTTPS Certification = False
 reLoad = False
 isInit = True
