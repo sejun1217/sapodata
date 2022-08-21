@@ -1,0 +1,17 @@
+  method ZDEMOINPUTSET_CREATE_ENTITY.
+    data: wa_entity like er_entity,
+          gs_zdemoinput type zdemoinput.
+
+TRY.
+CALL METHOD io_data_provider->read_entry_data
+  IMPORTING
+    es_data = wa_entity.
+
+    if wa_entity is NOT INITIAL.
+
+      MOVE-CORRESPONDING wa_entity to gs_zdemoinput.
+      modify zdemoinput from gs_zdemoinput.
+
+    endif.
+
+  CATCH /iwbep/cx_mgw_tech_exception.
