@@ -38,7 +38,7 @@ def create_dump_file():
     # create contents
     x = 1
     json_dump =[]
-    while (x <= totalEntities):
+    while (x <= totalLines):
         # change!! Table schema
         new_entry = { "Vbeln" : str(x), "Vkorg" : "1710" }
         json_dump.append(new_entry)
