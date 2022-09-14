@@ -12,11 +12,11 @@ odpServiceName = "<OData Service Name>"
 odpEntitySetName = "<OData Entity Name>"
 sapUser = "<SAP User>"
 sapPassword = "<SAP User Password>"
-
-# S3 Info
 verify = False # verify HTTPS Certification = False
 reLoad = False
 isInit = True
+
+# SQS Info
 queue_url = 'https://sqs.us-east-1.amazonaws.com/xxxxxxxxxxxx/sap-odata-import-test'
 
 sqs_client = boto3.client(
