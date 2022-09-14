@@ -45,7 +45,7 @@ def create_dump_file():
         x = x + 1
     
     # create file name 
-    filename = ''.join([tablename,"-",str(totalEntities),".json"]) 
+    filename = ''.join([tablename,"-",str(totalLines),".json"]) 
     
     # write local file
     with open(filename,encoding= "utf-8",mode="w") as file: 
