@@ -18,7 +18,7 @@ sapPassword = '<SAP User Password>'
 # S3 Info
 dataS3Bucket = "<Amazon S3 bucket name>"
 dataS3Folder = "<Amazon S3 folder name>"
-dataS3name = "<Amazon S3 object name>"
+dataS3file = "<Amazon S3 object name>"
 verify = False # verify HTTPS Certification = False
 reLoad = False
 isInit = True
