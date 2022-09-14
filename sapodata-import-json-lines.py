@@ -69,7 +69,8 @@ def _http_request(line):
 def import_json_to_sap():
     
     # download a json from S3
-    s3_filename = dataS3Folder + '/' + dataS3file
+    #s3_filename = dataS3Folder + '/' + dataS3file
+    s3_filename = dataS3file
     s3 = boto3.client('s3')
     s3.download_file(dataS3Bucket,s3_filename,dataS3file)
     
