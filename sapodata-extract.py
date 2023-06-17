@@ -8,16 +8,15 @@ import copy
 import uuid
 import urllib3
 
-#sapHostName = "forecast-workshop-sejun.sejun.people.aws.dev"
-sapHostName = "glue.aws.demoappflow.dev"
-sapPort = "443"
-odpServiceName = "ZMMDEMO_SRV"
-odpEntitySetName = "ZVPAIOC01Set"
+sapHostName = "<ELB URL or SAP Applications URL>"
+sapPort = "<ELB Listener Port>"
+odpServiceName = "<OData Service Name>"
+odpEntitySetName = "<OData Entity Name>"
 dataChunkSize = "1000"
-dataS3Bucket='forecast-workshop-sejun'
-dataS3Folder='extract'
-sapUser = 'BPINST'
-sapPassword = 'Welcome1'
+dataS3Bucket='<Amazon S3 bucket name>'
+dataS3Folder='<Amazon S3 folder name>'
+sapUser = '<SAP USER>'
+sapPassword = '<SAP Password>'
 _athenacompatiblejson = True
 # ------------------------
 # Initialize
