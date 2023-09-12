@@ -95,14 +95,8 @@ def _make_http_call_to_sap(url,headers):
 # Conver JSON to athena format
 # ------------------------------------
 def _athenaJson(objects):
-    return '\n'.join(json.dumps(obj,indent=4,sort_keys=True,default=str) for obj in objects)
+    return '\n'.join(json.dumps(obj) for obj in objects)
     
-# ------------------------------------
-# subclass JSONEncoder
-# ------------------------------------   
-def datetime_to_json_formatting(o):
-    if isinstance(o, (date, datetime)):
-         return o.isoformat()
 
 # ------------------------------------
 # Run Script
