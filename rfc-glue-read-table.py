@@ -22,11 +22,11 @@ PASSWD ='' #Adjust
 RFC_Function = "/SAPDS/RFC_READ_TABLE2"
 READ_Table = "VBAP"
 # TABLE_Fields = ["MANDT", "VBELN", "ERDAT", "ERZET"]
-Table_Rowcount = 5
+# Table_Rowcount = 5
 
 # S3 Info
 file_format = ".parquet"
-dataS3Bucket = "pyrfc-s4h-table"
+dataS3Bucket = "" #Adjust - Speficy your bucket name to store the data e.g. <AccountID>-saprfcglue
 dataS3Folder = "glue/"
 dataS3file = READ_Table+file_format
 #dataS3file = READ_Table+".json"
