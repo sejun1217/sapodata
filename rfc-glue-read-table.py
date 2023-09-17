@@ -30,7 +30,6 @@ file_format = ".parquet"
 dataS3Bucket = "" #Adjust - Speficy your bucket name to store the data e.g. <AccountID>-saprfcglue
 dataS3Folder = "glue/"
 dataS3file = READ_Table+file_format
-#dataS3file = READ_Table+".json"
 
 # ------------------------
 # Send JSON to Amazon S3
