@@ -60,11 +60,11 @@ def _result_to_output(result):
     # body
     data = []
     for line in result[out_table]:
-        raw_data = line["WA"].strip().split(',')
+        raw_data = line["WA"].strip().split(';')
         data.append(raw_data)
     
    
-    pd_result = pd.DataFrame(data)
+    pd_result = pd.DataFrame(data,columns=data_field)
 
     # pandas to json or parquet
     if file_format == '.json':
@@ -84,8 +84,8 @@ def _result_to_output(result):
 def _call_rfc_function():
     conn = Connection(ashost=ASHOST, sysnr=SYSNR, client=CLIENT, user=USER, passwd=PASSWD)
     print("----Begin of RFC---")
-    # result = conn.call(RFC_Function, QUERY_TABLE = READ_Table, DELIMITER = ",", ROWCOUNT = Table_Rowcount)
-    result = conn.call(RFC_Function, QUERY_TABLE = READ_Table, DELIMITER = ",")
+    result = conn.call(RFC_Function, QUERY_TABLE = READ_Table, DELIMITER = ";")
+    # result = conn.call("RFC_READ_TABLE", QUERY_TABLE="READ_Table", FIELDS = fields, DELIMITER = ";", ROWCOUNT=Table_Rowcount)
     _result_to_output(result)
     
 
