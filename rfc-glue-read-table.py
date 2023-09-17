@@ -12,11 +12,11 @@ import io
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ASHOST='10.0.19.212' #Adjust
-CLIENT='100' #Adjust
-SYSNR='00'  #Adjust
-USER='BPINST'   #Adjust
-PASSWD ='Welcome1' #Adjust
+ASHOST='' #Adjust
+CLIENT='' #Adjust
+SYSNR=''  #Adjust
+USER=''   #Adjust
+PASSWD ='' #Adjust
 
 # RFC & Table settiong
 RFC_Function = "/SAPDS/RFC_READ_TABLE2"
