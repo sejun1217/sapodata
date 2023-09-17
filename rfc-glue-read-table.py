@@ -12,6 +12,7 @@ import io
 import pyarrow as pa
 import pyarrow.parquet as pq
 
+# System info
 ASHOST='' #Adjust
 CLIENT='' #Adjust
 SYSNR=''  #Adjust
