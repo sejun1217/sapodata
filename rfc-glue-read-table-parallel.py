@@ -28,7 +28,7 @@ maxEntities = 100000000 #modify - Max Row count
 # RFC & Table settiong
 RFC_Function = "/SAPDS/RFC_READ_TABLE2"
 #TABLE_Fields = ["MANDT", "VBELN", "ERDAT", "ERZET"]
-Table_Delimeter = '`'
+Table_Delimiter = '`'
 
 # S3 Info
 file_format = "parquet"
@@ -75,7 +75,7 @@ def _result_to_output(result):
     data_count = 0
     err_count = 0
     for line in result[out_table]:
-        raw_data = line["WA"].strip().split(Table_Delimeter)
+        raw_data = line["WA"].strip().split(Table_Delimiter)
         if len(raw_data) == len(data_field):
             data_count += 1
             data.append(raw_data)
@@ -127,7 +127,7 @@ def _call_rfc_function():
     x = 0
     global Result_Rowcount;Result_Rowcount = Table_Rowcount
     while (x < maxEntities and Result_Rowcount == Table_Rowcount ):
-        result = conn.call(RFC_Function, QUERY_TABLE = READ_Table, DELIMITER = Table_Delimeter, ROWSKIPS=x, ROWCOUNT=Table_Rowcount)
+        result = conn.call(RFC_Function, QUERY_TABLE = READ_Table, DELIMITER = Table_Delimiter, ROWSKIPS=x, ROWCOUNT=Table_Rowcount)
         global dataS3file; dataS3file = READ_Table+str(x)+"."+file_format
         _result_to_output(result)
         # print(Result_Rowcount)
