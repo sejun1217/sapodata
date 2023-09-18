@@ -84,7 +84,7 @@ def _call_rfc_function():
     conn = Connection(ashost=ASHOST, sysnr=SYSNR, client=CLIENT, user=USER, passwd=PASSWD)
     print("----Begin of RFC---")
     result = conn.call(RFC_Function, QUERY_TABLE = READ_Table, DELIMITER = ";")
-    # result = conn.call("RFC_READ_TABLE", QUERY_TABLE="READ_Table", FIELDS = fields, DELIMITER = ";", ROWCOUNT=Table_Rowcount)
+    # result = conn.call(RFC_Function, QUERY_TABLE= READ_Table, DELIMITER = ";", FIELDS = TABLE_Fields, ROWCOUNT=Table_Rowcount)
     _result_to_output(result)
     
 
